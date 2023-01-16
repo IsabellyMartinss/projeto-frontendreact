@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0px;
     padding: 0px;
     background-image: url("https://bit.ly/3GlxIKx");
-    background-position: top-right;
+    background-position: center;
     color: white;
     background-repeat: no-repeat;
     font-family: 'Crete Round', serif, 'Arial Narrow Bold';
@@ -38,9 +38,10 @@ input{
     background-color: lightgrey;
     border: none;
     color: black;
-    max-width: 5vw;
+    max-width: 8vw;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
+    font-size: 1em;
 }
 p{
     background-repeat: no-repeat;
@@ -49,7 +50,7 @@ p{
 div{
     background-repeat: no-repeat;
     background-image: none;
-    color: gray;
+    color: lightgray;
 }
 header{
     background-image: none;
@@ -59,13 +60,21 @@ h1{
     background-image: none;
     background-repeat: no-repeat;
 }
-img{
-    width: 10vw;
-    height: 20vh;
-    border-radius: 100%;
-}
 select{
     text-align: center;
-    background-color: gray;
+    background-color: lightgray;
+    background-image: none;
+    font-size: 0.8em;
+    color: black;
+    max-width: 8vw;
+}
+div.animated.fadeIn{
+    height: 25vh;
+    background-image: none;
+    background-repeat: none;
+}
+body{
+    background-image:none;
+    background-repeat: none;
 }
 `

@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
 export const EstiloHeader = styled.header`
-    width: 35vw;
+    background-repeat: no-repeat;
+    background-image: none;
+    animation: pulsate 0.30s ease-in-out infinite alternate; 
+    width: 30vw;
+    height: 22vh;
+    margin-top: 1vh;
     color: #FFFACD;
-    height: 13vh;
     text-align: center;
     font-size: 2.7vh;
-    font-family: 'Crete Round';
+    font-family: 'Crete Round', sans-serif;
     font-display: swap;
+    position: sticky;
+    left: 0.5px;
     text-shadow:
       0 0 7px #fff,
       0 0 10px #fff,
@@ -18,8 +24,7 @@ export const EstiloHeader = styled.header`
       0 0 102px #5271ff,
       0 0 151px #5271ff;
     @keyframes pulsate {
-    100% {
-  
+    100% { 
         text-shadow:
         0 0 2px #fff,
         0 0 11px #fff,
@@ -42,18 +47,5 @@ export const EstiloHeader = styled.header`
       0 0 94px #5271ff,
       0 0 140px #5271ff;
   }}
-    h1{
-    margin: 2vh;
-    border: 0.4vh solid #fff;
-    border-radius: 7vw;
-    animation: pulsate 0.39s ease-in-out infinite alternate;    
-    padding: 0.8em;
-    box-shadow: 0 0 .1rem #fff,
-              0 0 .2rem #fff,
-              0 0 0.8rem #5271ff,
-              0 0 0.8rem #5271ff,
-              0 0 2.8rem #5271ff,
-              inset 0 0 1.3rem #5271ff;
-    }
 `
 

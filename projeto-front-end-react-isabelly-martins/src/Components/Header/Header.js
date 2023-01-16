@@ -6,7 +6,7 @@ export function Header() {
     return (
         <Animated>
             <EstiloHeader>
-                <h1>Interstellar Ships <br></br> Star Trek: Discovery</h1>
+                <h1>Star Trek: Discovery<br></br>Interstellar Ships</h1>
             </EstiloHeader>
         </Animated>
     )

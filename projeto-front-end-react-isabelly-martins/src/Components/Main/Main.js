@@ -1,6 +1,6 @@
 import { Aside } from "./Components/Aside/Aside";
 import { Carrinho } from "./Components/Carrinho/Carrinho";
-import { EstiloCard, EstiloMain, EstiloUl, SeparadorCard, EstiloButton, BotaoCarrinho, EstiloImgUl } from "./styled";
+import { EstiloCard, EstiloMain, EstiloUl, SeparadorCard, EstiloButton, BotaoCarrinho } from "./styled";
 import React, { useEffect, useState } from "react";
 import discovery from "../../images/discovery.jpg"
 import shenzhou from "../../images/shenzhou.jpg"
@@ -17,9 +17,6 @@ export function Main({ nome, setNome, valorMinimo, setValorMinimo, valorMaximo, 
             valor: 5000,
             lancamento: "Ano 2256",
             propulsao: "Motores: Impulso, Dobra e Esporos",
-            // armamento: "Fasers, Torpedos Fotônicos",
-            // defesa: "Escudo Defletor",
-            // bonus: "Tem a capacidade de viajar entre universos paralelos",
         },
         {
             nave: "USS Shenzhou - Classe: Walker NCC-1227",
@@ -28,9 +25,6 @@ export function Main({ nome, setNome, valorMinimo, setValorMinimo, valorMaximo, 
             valor: 3500,
             lancamento: "Ano 2249",
             propulsao: "Motores: Impulso e Dobra",
-            // armamento: "Fasers, Torpedos Fotônicos",
-            // defesa: "Escudo Defletor",
-            // bonus: "Motor proporciona viajar mais rápido do que a velocidade da luz",
         },
         {
             nave: "USS Glenn - Classe: CrossField NCC-1030",
@@ -39,9 +33,6 @@ export function Main({ nome, setNome, valorMinimo, setValorMinimo, valorMaximo, 
             valor: 4500,
             lancamento: "Ano 2256",
             propulsao: "Motores: Impulso, Dobra e Esporos",
-            // armamento: "Fasers, Torpedos Fotônicos",
-            // defesa: "Escudo Defletor",
-            // bonus: "Tem a capacidade de viajar entre universos paralelos",
         },
         {
             nave: "USS Yeager - Classe: Yeager NCC-1437",
@@ -50,8 +41,6 @@ export function Main({ nome, setNome, valorMinimo, setValorMinimo, valorMaximo, 
             quantidade: 1,
             valor: 4000,
             propulsao: "Motores: Impulso, Ablative Generators e dobra",
-            // armamento: "Phasers, torpedos de fóton, quantum torpedoes, nanoprobes e transphasic torpedoes",
-            // defesa: "Escudo Defletor",
         },
     ])
     const [total, setTotal] = useState(0)
@@ -273,14 +262,12 @@ export function Main({ nome, setNome, valorMinimo, setValorMinimo, valorMaximo, 
                                 .map((produto, index) => {
                                     return (
                                         <EstiloCard key={index}>
-                                            <EstiloImgUl>
                                                 <EstiloUl>
                                                     <li>{produto.nave}</li>
                                                     <li>{produto.propulsao}</li>
                                                     <li>{produto.valor}</li>
                                                 </EstiloUl>
                                                 <img src={produto.img}/>
-                                            </EstiloImgUl>
                                             <EstiloButton onClick={() => adicionaCarrinho(produto)}>Adicionar ao carrinho</EstiloButton>
                                         </EstiloCard>
                                     )

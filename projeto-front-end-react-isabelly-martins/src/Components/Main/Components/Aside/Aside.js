@@ -29,6 +29,14 @@ export function Aside({ valorMinimo, setValorMinimo, valorMaximo, setValorMaximo
         <EstiloAside>
             <h1>Filtros</h1>
             <div>
+                <p>Ordenar</p>
+                <select value={ordenaPreco} onChange={getOrdenacao}>
+                    <option></option>
+                    <option>Preço Mínimo</option>
+                    <option>Preço Máximo</option>
+                </select>
+            </div>
+            <div>
                 <p>Valor mínimo</p>
                 <input type="number" value={valorMinimo} onChange={getValorMinimo} />
             </div>
@@ -40,14 +48,7 @@ export function Aside({ valorMinimo, setValorMinimo, valorMaximo, setValorMaximo
                 <p>Busca por nome</p>
                 <input type="text" value={buscaNome} onChange={getBuscaNome} />
             </div>
-            <div>
-                <p>Ordenar</p>
-                <select value={ordenaPreco} onChange={getOrdenacao}>
-                    <option></option>
-                    <option>Preço Mínimo</option>
-                    <option>Preço Máximo</option>
-                </select>
-            </div>
+            
         </EstiloAside>
     )
 };
